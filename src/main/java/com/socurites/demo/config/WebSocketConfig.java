@@ -35,6 +35,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         // Registers the /demo-websocket endpoint,
         // enabling SockJS fallback options so that alternate transports can be used
         // if WebSocket is not available
-        registry.addEndpoint("/demo-websocket");
+        registry.addEndpoint("/demo-websocket")
+                .withSockJS();
     }
 }
